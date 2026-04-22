@@ -10,20 +10,30 @@
 <body>
 
 <header>
-  <img src="logo.png" class="logo">
-  <h1>SABKU</h1>
+  <div class="logo-wrap">
+    <img src="logo.png">
+    <h1>SABKU</h1>
+  </div>
 </header>
 
 <section class="hero">
   <h2>ศูนย์กลางนิสิต มก. บางเขน</h2>
   <p>ข่าวสาร • กิจกรรม • โอกาส</p>
+  <button onclick="scrollToNews()">ดูข่าวล่าสุด</button>
 </section>
 
-<section class="container">
+<section class="container" id="news">
   <input type="text" id="search" placeholder="🔍 ค้นหาข่าว...">
   <div id="news-container"></div>
 </section>
 
 <script src="script.js"></script>
+
+<script>
+function scrollToNews(){
+  document.getElementById('news').scrollIntoView({behavior:"smooth"});
+}
+</script>
+
 </body>
 </html>
